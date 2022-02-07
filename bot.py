@@ -53,9 +53,9 @@ async def on_raw_reaction_remove(payload):
         print(repr(e))
 @bot.event
 async def on_member_join(member):
-    role = discord.utils.get(member.guild.roles, name = "Новичок")
+    role = discord.utils.get(member.guild.roles, name = "Гость")
     await member.add_roles(role)
-    wellcomechannel = bot.get_channel(745809678285537281)
+    wellcomechannel = bot.get_channel(940248018807054336)
     await wellcomechannel.send(f'Добро пожаловать, {member.mention}, в гильдию OneHive')
     
 token = os.environ.get('BOT_TOKEN')
